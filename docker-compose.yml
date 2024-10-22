@@ -1,6 +1,6 @@
 services:
   server:
-    image: chiran97/node_ci_cd:{IMAGE_TAG}
+    image: chiran97/node_ci_cd:${IMAGE_TAG}
     ports:
       - "8000:8000"
     restart: unless-stopped
