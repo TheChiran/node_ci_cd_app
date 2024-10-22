@@ -51,7 +51,7 @@ pipeline {
         {
             steps
             {
-                sh 'docker rmi ${IMAGE_NAME}:${IMAGE_TAG}'
+                sh 'docker rmi ${IMAGE_TAG}'
                 echo "Docker image removed successfully from local environment."
             }
         }
