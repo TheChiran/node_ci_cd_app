@@ -47,7 +47,16 @@ pipeline {
             }
         }   
 
-        stage('Remove / Stop previous')
+        stage('Remove / clean pushed image from local environment')
+        {
+            steps
+            {
+                sh 'docker rmi ${IMAGE_NAME}:${IMAGE_TAG}'
+                echo "Docker image removed successfully from local environment."
+            }
+        }
+
+        stage('Stop previous container')
         {
             steps
             {
