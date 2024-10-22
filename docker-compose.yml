@@ -1,6 +1,6 @@
 services:
   server:
-    build: ./
+    image: chiran97/node_ci_cd
     ports:
       - "8000:8000"
     restart: unless-stopped
