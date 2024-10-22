@@ -68,7 +68,7 @@ pipeline {
         {
             steps
             {
-                sh 'docker compose up -d'
+                sh 'IMAGE_TAG=${IMAGE_TAG} docker compose up -d'
             }
         }
     }
