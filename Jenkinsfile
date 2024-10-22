@@ -46,6 +46,22 @@ pipeline {
                 echo "Docker image push successfully"
             }
         }   
+
+        stage('Remove / Stop previous')
+        {
+            steps
+            {
+                sh 'docker compose down'
+            }
+        }
+
+        stage('Start with new updates')
+        {
+            steps
+            {
+                sh 'docker compose up -d'
+            }
+        }
     }
 
     post {
