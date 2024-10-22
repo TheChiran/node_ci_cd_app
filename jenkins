@@ -4,7 +4,7 @@ pipeline {
     environment {
         GIT_URL = "https://github.com/TheChiran/node_ci_cd_app.git/"
         IMAGE_NAME = 'chiran97/node_ci_cd'
-        IMAGE_TAG = "${IMAGE_NAME}:latest"
+        IMAGE_TAG = "${IMAGE_NAME}:${env.GIT_COMMIT}"
     }
     
     stages {
